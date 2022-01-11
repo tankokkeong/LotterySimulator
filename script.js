@@ -27,7 +27,7 @@ function generateResultsPool(){
         return;
     }
 
-    var random_number = numberFormatter(Math.ceil(Math.random()*9999));
+    var random_number = numberFormatter(Math.ceil(Math.random()*10100));
 
     if(checkNumberExists(random_number) == 0){
         results_pool.push(random_number);
