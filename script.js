@@ -7,8 +7,9 @@ function tryLuck(){
 
     var input = document.getElementById("my-number-input").value.trim();
     var error_prompt = document.getElementById("error-prompt");
+    var digit_validation = /^[0-9]+$/;
 
-    if(input.length == 4){
+    if(input.length == 4 && digit_validation.test(input)){
         generateResultsPool();
         printResults();
         error_prompt.innerHTML = "";
@@ -84,6 +85,7 @@ function inputFormatter(){
     //digit validation
     if(digit_validation.test(input.value) == false){
         input.value = input.value.substring(0, input.value.length-1);
+        console.log("triggered")
     }
 
     //4-digit validation
