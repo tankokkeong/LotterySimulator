@@ -85,7 +85,6 @@ function inputFormatter(){
     //digit validation
     if(digit_validation.test(input.value) == false){
         input.value = input.value.substring(0, input.value.length-1);
-        console.log("triggered")
     }
 
     //4-digit validation
